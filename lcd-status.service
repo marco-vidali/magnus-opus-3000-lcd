@@ -1,0 +1,12 @@
+[Unit]
+Description=PiPedal LCD Status Display
+After=multi-user.target
+
+[Service]
+type=simple
+user=root
+ExecStart=/home/patch/magnus-opus-3000-lcd/venv/bin/python3 /home/patch/magnus-opus-3000-lcd/main.py
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
