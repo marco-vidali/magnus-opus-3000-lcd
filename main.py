@@ -5,7 +5,7 @@ from lcd_i2c import LCD_I2C
 
 def is_pipedal_running():
     result = subprocess.run(
-        ["systemctl", "is-active", "pipedal"],
+        ["systemctl", "is-active", "pipedald"],
         capture_output=True,
         text=True,
         check=False,
